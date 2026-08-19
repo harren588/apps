@@ -1,0 +1,18 @@
+{
+  "request": {
+    "retries": 3,
+    "timeout_seconds": 5
+  },
+  "telegram": {
+    "bot_token": "",
+    "chat_id": ""
+  },
+  "apps": [
+    {
+      "app_id": "900392332",
+      "countries": "CN,US,TR",
+      "watch_price": true,
+      "watch_version": true
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+name: App Store Monitor
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: app-store-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Restore cache from run branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git fetch origin +refs/heads/run:refs/remotes/origin/run --depth=1; then
+            if git cat-file -e refs/remotes/origin/run:cache.json 2>/dev/null; then
+              git show refs/remotes/origin/run:cache.json > cache.json
+            fi
+          else
+            echo "run branch does not exist yet; starting with an empty cache"
+          fi
+
+      - name: Run one monitoring pass
+        id: monitor
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python app_store_monitor.py --config config.json --cache cache.json
+
+      - name: Replace run branch with the latest cache
+        if: ${{ always() && hashFiles('cache.json') != '' }}
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          run_dir="$(mktemp -d)"
+          cp cache.json "$run_dir/cache.json"
+          git -C "$run_dir" init
+          git -C "$run_dir" config user.name "github-actions[bot]"
+          git -C "$run_dir" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$run_dir" checkout --orphan run
+          git -C "$run_dir" add cache.json
+          git -C "$run_dir" commit -m "Update App Store monitor cache"
+          git -C "$run_dir" remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git -C "$run_dir" push --force origin run
+
+      - name: Propagate monitor failure
+        if: ${{ steps.monitor.outcome == 'failure' }}
+        run: exit 1
