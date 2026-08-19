@@ -2,7 +2,7 @@ name: App Store Monitor
 
 on:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 */3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -43,11 +43,22 @@ jobs:
 
       - name: Run one monitoring pass
         id: monitor
-        continue-on-error: true
+        shell: bash
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python app_store_monitor.py --config config.json --cache cache.json
+        run: |
+          set +e
+          python app_store_monitor.py --config config.json --cache cache.json
+          monitor_status=$?
+          set -e
+
+          if [[ "$monitor_status" -eq 1 ]]; then
+            echo "::warning title=App Store monitor partially failed::Some requests or notifications failed after retries. Successful results were saved, and failed items will be retried next time."
+            exit 0
+          fi
+
+          exit "$monitor_status"
 
       - name: Replace run branch with the latest cache
         if: ${{ always() && hashFiles('cache.json') != '' }}
@@ -66,7 +77,3 @@ jobs:
           git -C "$run_dir" commit -m "Update App Store monitor cache"
           git -C "$run_dir" remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git -C "$run_dir" push --force origin run
-
-      - name: Propagate monitor failure
-        if: ${{ steps.monitor.outcome == 'failure' }}
-        run: exit 1
