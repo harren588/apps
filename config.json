@@ -9,10 +9,52 @@
   },
   "apps": [
     {
-      "app_id": "900392332",
-      "countries": "CN,US,TR",
-      "watch_price": true,
+      "app_id": "414478124",
+      "countries": "CN",
+      "watch_price": false,
       "watch_version": true
+    },
+    {
+      "app_id": "900392332",
+      "countries": "CN,HK,TW,SG,AU,US,CA,JP,TR,IN",
+      "watch_price": true,
+      "watch_version": false
+    },
+    {
+      "app_id": "1067198688",
+      "countries": "CN,HK,TW,SG,AU,US,CA,JP,TR,IN",
+      "watch_price": true,
+      "watch_version": false
+    },
+    {
+      "app_id": "6755395866",
+      "countries": "CN,HK,TW,SG,AU,US,CA,JP,TR,IN",
+      "watch_price": true,
+      "watch_version": false
+    },
+    {
+      "app_id": "1055273043",
+      "countries": "CN,HK,TW,SG,AU,US,CA,JP,TR,IN",
+      "watch_price": true,
+      "watch_version": false
+    },
+    {
+      "app_id": "6474194438",
+      "countries": "CN,HK,TW,SG,AU,US,CA,JP,TR,IN",
+      "watch_price": true,
+      "watch_version": false
+    },
+    {
+      "app_id": "479516143",
+      "countries": "CN,HK,SG,US,JP",
+      "watch_price": true,
+      "watch_version": false
+    },
+    {
+      "app_id": "424389933",
+      "countries": "CN,HK,TW,SG,AU,US,CA,JP,TR,IN",
+      "watch_price": true,
+      "watch_version": false
     }
   ]
 }
