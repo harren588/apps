@@ -40,13 +40,13 @@
     },
     {
       "app_id": "6474194438",
-      "countries": "CN,HK,TW,SG,AU,US,CA,JP,TR,IN",
+      "countries": "HK,TW,SG,AU,US,CA,JP,TR,IN",
       "watch_price": true,
       "watch_version": false
     },
     {
       "app_id": "479516143",
-      "countries": "CN,HK,SG,US,JP",
+      "countries": "HK,SG,US,JP",
       "watch_price": true,
       "watch_version": false
     },
