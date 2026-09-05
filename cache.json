@@ -1,0 +1,288 @@
+{
+  "apps": {
+    "1055273043": {
+      "prices": {
+        "AU": {
+          "currency": "AUD",
+          "price": "229.99"
+        },
+        "CA": {
+          "currency": "CAD",
+          "price": "199.99"
+        },
+        "CN": {
+          "currency": "CNY",
+          "price": "998.00"
+        },
+        "HK": {
+          "currency": "HKD",
+          "price": "1188.00"
+        },
+        "IN": {
+          "currency": "INR",
+          "price": "14900.00"
+        },
+        "JP": {
+          "currency": "JPY",
+          "price": "22000.00"
+        },
+        "SG": {
+          "currency": "SGD",
+          "price": "199.98"
+        },
+        "TR": {
+          "currency": "TRY",
+          "price": "7999.99"
+        },
+        "TW": {
+          "currency": "TWD",
+          "price": "4990.00"
+        },
+        "US": {
+          "currency": "USD",
+          "price": "139.99"
+        }
+      }
+    },
+    "1067198688": {
+      "prices": {
+        "AU": {
+          "currency": "AUD",
+          "price": "22.99"
+        },
+        "CA": {
+          "currency": "CAD",
+          "price": "19.99"
+        },
+        "CN": {
+          "currency": "CNY",
+          "price": "98.00"
+        },
+        "HK": {
+          "currency": "HKD",
+          "price": "118.00"
+        },
+        "IN": {
+          "currency": "INR",
+          "price": "1499.00"
+        },
+        "JP": {
+          "currency": "JPY",
+          "price": "2500.00"
+        },
+        "SG": {
+          "currency": "SGD",
+          "price": "19.98"
+        },
+        "TR": {
+          "currency": "TRY",
+          "price": "799.99"
+        },
+        "TW": {
+          "currency": "TWD",
+          "price": "490.00"
+        },
+        "US": {
+          "currency": "USD",
+          "price": "14.99"
+        }
+      }
+    },
+    "414478124": {
+      "version": "8.0.76"
+    },
+    "424389933": {
+      "prices": {
+        "AU": {
+          "currency": "AUD",
+          "price": "499.99"
+        },
+        "CA": {
+          "currency": "CAD",
+          "price": "399.99"
+        },
+        "CN": {
+          "currency": "CNY",
+          "price": "1998.00"
+        },
+        "HK": {
+          "currency": "HKD",
+          "price": "2288.00"
+        },
+        "IN": {
+          "currency": "INR",
+          "price": "29900.00"
+        },
+        "JP": {
+          "currency": "JPY",
+          "price": "50000.00"
+        },
+        "SG": {
+          "currency": "SGD",
+          "price": "399.98"
+        },
+        "TR": {
+          "currency": "TRY",
+          "price": "14999.99"
+        },
+        "TW": {
+          "currency": "TWD",
+          "price": "9990.00"
+        },
+        "US": {
+          "currency": "USD",
+          "price": "299.99"
+        }
+      }
+    },
+    "479516143": {
+      "prices": {
+        "HK": {
+          "currency": "HKD",
+          "price": "56.00"
+        },
+        "JP": {
+          "currency": "JPY",
+          "price": "1300.00"
+        },
+        "SG": {
+          "currency": "SGD",
+          "price": "9.98"
+        },
+        "US": {
+          "currency": "USD",
+          "price": "6.99"
+        }
+      }
+    },
+    "6474194438": {
+      "prices": {
+        "AU": {
+          "currency": "AUD",
+          "price": "14.99"
+        },
+        "CA": {
+          "currency": "CAD",
+          "price": "12.99"
+        },
+        "HK": {
+          "currency": "HKD",
+          "price": "88.00"
+        },
+        "IN": {
+          "currency": "INR",
+          "price": "999.00"
+        },
+        "JP": {
+          "currency": "JPY",
+          "price": "1500.00"
+        },
+        "SG": {
+          "currency": "SGD",
+          "price": "14.98"
+        },
+        "TR": {
+          "currency": "TRY",
+          "price": "499.99"
+        },
+        "TW": {
+          "currency": "TWD",
+          "price": "320.00"
+        },
+        "US": {
+          "currency": "USD",
+          "price": "9.99"
+        }
+      }
+    },
+    "6755395866": {
+      "prices": {
+        "AU": {
+          "currency": "AUD",
+          "price": "149.99"
+        },
+        "CA": {
+          "currency": "CAD",
+          "price": "129.99"
+        },
+        "CN": {
+          "currency": "CNY",
+          "price": "698.00"
+        },
+        "HK": {
+          "currency": "HKD",
+          "price": "788.00"
+        },
+        "IN": {
+          "currency": "INR",
+          "price": "9900.00"
+        },
+        "JP": {
+          "currency": "JPY",
+          "price": "15000.00"
+        },
+        "SG": {
+          "currency": "SGD",
+          "price": "149.98"
+        },
+        "TR": {
+          "currency": "TRY",
+          "price": "4999.99"
+        },
+        "TW": {
+          "currency": "TWD",
+          "price": "2990.00"
+        },
+        "US": {
+          "currency": "USD",
+          "price": "99.99"
+        }
+      }
+    },
+    "900392332": {
+      "prices": {
+        "AU": {
+          "currency": "AUD",
+          "price": "499.99"
+        },
+        "CA": {
+          "currency": "CAD",
+          "price": "399.99"
+        },
+        "CN": {
+          "currency": "CNY",
+          "price": "1998.00"
+        },
+        "HK": {
+          "currency": "HKD",
+          "price": "2288.00"
+        },
+        "IN": {
+          "currency": "INR",
+          "price": "29900.00"
+        },
+        "JP": {
+          "currency": "JPY",
+          "price": "50000.00"
+        },
+        "SG": {
+          "currency": "SGD",
+          "price": "399.98"
+        },
+        "TR": {
+          "currency": "TRY",
+          "price": "14999.99"
+        },
+        "TW": {
+          "currency": "TWD",
+          "price": "9990.00"
+        },
+        "US": {
+          "currency": "USD",
+          "price": "299.99"
+        }
+      }
+    }
+  },
+  "schema_version": 1
+}
