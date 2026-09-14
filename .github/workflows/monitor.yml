@@ -2,7 +2,7 @@ name: App Store Monitor
 
 on:
   schedule:
-    - cron: "17 */3 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 permissions:
